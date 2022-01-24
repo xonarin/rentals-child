@@ -1,0 +1,552 @@
+/*
+Theme Name: WpRentals Child theme
+Theme URI: http://themeforest.net/user/wpestate
+Description: Ultimate WordPress Theme created by WpEstate for accommodation booking. WpRentals is clean, flexible, fully responsive and retina Ready. Its smart settings allow you to build outstanding renting websites easily and fast.
+Version: 2.7
+Author: wpestate.org
+Author URI: http://themeforest.net/user/annapx
+Tags: white, one-column, two-columns,left-sidebar, right-sidebar, fluid-layout , custom-menu, theme-options, translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: wprentals
+
+-------------------------------------------------------------- */
+
+#access a {
+	padding: 23px 5px;
+}
+
+#listing_description .panel-body {
+  max-height: 100% !important;
+}
+
+#view_more_desc {
+  display: none !important;
+}
+
+.table_border p {
+	display: inline;
+}
+
+.table_border {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px #666 solid;
+  margin-bottom: 10px;
+}
+
+.table_border tr.tr_header {
+  text-align: center;
+  font-weight: bold;
+  background: #539cc9;
+}
+
+.table_border td {
+  border-collapse: collapse;
+  border: 1px #666 solid;
+  padding: 2px 5px;
+}
+
+.table_border tr.tr_header td {
+  color: #fff;
+}
+
+.abbs {
+  background-color: #ebffe8;
+  border: 2px solid #9be98f;
+  padding: 10px;
+  width: 65%;
+}
+
+.abbs2fon {
+  background-color: #dffed7;
+  border-color: #90cc29;
+  margin-top: 25px;
+  padding-bottom: 18px;
+  padding-top: 15px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #2fac11;
+}
+
+.abbs-yellow {
+  background-color: #f9f6b9;
+  border-color: #fbed84;
+  margin-top: 25px;
+  padding-bottom: 18px;
+  padding-top: 15px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #ffb50f;
+}
+
+.skidka-circle {
+  background: rgba(255, 246, 18, 0.83);
+  position: absolute;
+  border-radius: 50%;
+  right: 10%;
+  top: 50%;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FF0000;
+  padding: 9px;
+  transform: translate(0, -50%);
+  z-index: 999;
+}
+
+.skidka-circle span {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  display: block;
+}
+
+.skidka-circle-prop {
+  top: 10px;
+  left: 10px;
+  right: unset;
+  transform: unset;
+}
+
+.price_unit-newcard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px!important;
+  bottom: 0!important;
+  left: 0;
+  background: rgba(0, 0, 0, 0.33);
+  padding: 10px 0 10px 8px;  
+  margin: 0;
+}
+
+.price-card span {
+  color: #FFF512;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sea-block {
+  padding: 0 10px 0 36px;
+  background: url('/wp-content/uploads/2021/12/waves.png') no-repeat left center;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.phone-preview-block {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.show_phone {
+  text-transform: uppercase;
+}
+
+.icone-phones {
+  padding-right: 10px;
+  padding-left: 1px;
+  font-size: 14px!important;
+}
+
+.featured_div {
+  right: -41px;
+  left: unset;
+  -ms-transform: rotate(34deg);
+  -webkit-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+
+.dasboard-prop-listing .blog_listing_image .featured_div {
+  right: unset;
+}
+
+.category_name {
+  padding-top: 20px;
+}
+
+.rating-comments_block {
+  position: absolute;
+  left: 8px;
+  bottom: 50px;
+  z-index: 999;
+}
+
+.rating-block {
+  display: block;
+  color: #fff;
+  line-height: 1;
+  padding: 3px;
+}
+
+.comments-link {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 9px;
+  color: #fff;
+  margin-top: 6px;
+}
+
+#listing_description {
+  width: 100%;
+}
+
+#listing_description .js-rmp-results-widget, #listing_description .js-rmp-results {
+  display: none;
+}
+
+.main-info {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.main__info-media {
+  position: relative;
+  flex: 0 0 50%;
+  padding: 0 20px 0 0;
+}
+
+.main__info-images {
+  max-width: 100%;
+  min-height: 290px;
+  object-fit: cover;
+}
+
+.main__info-list{  
+  flex: 0 0 50%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main__info-item {
+  margin-bottom: 1px;
+}
+
+.main__info-key {
+  font-size: 14px;
+}
+
+.main__info-value, .main__info-value a {
+  padding-left: 5px;
+  font-size: 14px!important;
+  font-weight: bold;
+}
+
+.main__info-item .show_phone {
+  font-size: 12px!important;
+  text-transform: none;
+}
+
+.main__info-item .phone_card-info {
+  color: #FF0000;
+
+}
+
+.post-views {
+  display: inline;
+  color: #FF0000;
+}
+
+.category_details_wrapper {
+  padding-top: 14px;
+}
+
+.category_wrapper  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.property_header3 .category_wrapper {
+  padding: 27px 0px 10px 0px;
+  border-bottom: 1px solid #e7e9ef;
+  margin-bottom: 20px;
+}
+
+.category_wrapper .rmp-rating-widget__results, .category_wrapper .rmp-rating-widget__msg {
+  display: none;
+}
+
+.user_dashboard_panel_guide a {
+  padding: 17px 20px 17px 20px;
+}
+
+.acf-radio-list {
+  display: flex!important;
+  flex-wrap: wrap;
+}
+
+.acf-radio-list li {
+  margin-right: 5px!important;
+}
+
+.acf-gallery .acf-gallery-attachment .thumbnail img {
+  width: 100%!important;
+  height: 100%!important;
+  object-fit: cover!important;
+}
+
+.thumbnail, .img-thumbnail {
+  padding: 0!important;
+  border: unset!important;
+}
+
+.acf-form-submit .acf-button {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  background-color: #806AE6;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  border: none;
+}
+
+#listing_description_type3 .rmp-results-widget {
+  display: none!important;
+}
+
+.acf-fields {
+  position: unset!important;
+}
+
+.properties-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 7px 7px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  list-style: none;
+}
+
+.gallery-title {
+  background: linear-gradient(
+    90deg,#a672e7 0%,#b881fd 100%);
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 19px;
+}
+
+.header_wrapper_inside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transparent_header #access a {
+  color: #484848;
+}
+
+table tbody tr td {
+  vertical-align: middle;
+}
+
+.calendar-menu, .favorite-menu, .mybook-menu, .myreserv-menu, .invoices-menu {
+  display: none!important;
+}
+
+.dashboard_widget_unit {
+  display: flex;
+  flex-direction: column;
+}
+
+.display_none, #icalfeed_wrapper, #profile_message2 {
+  display: none!important;
+}
+
+.favoritesnew-span {
+  color: #FFFFFF;
+  opacity: 0.4;
+  margin: 10px 8px;
+  font-size: 17px!important;
+  position: relative;
+  padding: 9px 8px;
+  float: left;
+  cursor: pointer;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.favoritesnew-span::after {
+  content: "";
+  background-color: #E5645F;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+.favoritesnew-span i {
+  position: relative;
+  z-index: 10;
+  font-size: 17px;
+  float: left;
+}
+
+.favoritesnew-span-active::after {
+  content: "";
+  background-color: #b881fc;
+  opacity: 1;
+}
+
+.favoritesnew-span-fullpage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  z-index: 999;
+}
+
+.favor-new {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.desctop-hearth {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  background-color: #a975eb;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.hearth-favorites {
+  display: block;
+  background: url('/wp-content/themes/wprentals-child/img/heart.png') no-repeat left center;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+
+.hearth-favorites span {
+  background: #28A7C7;
+  color: #fff;
+  border-radius: 10px;
+  padding: 9px 5px;
+  position: absolute;
+  line-height: 0;
+  right: 0;
+  top: -10px;
+}
+
+.quicktags-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.wp-core-ui .quicktags-toolbar input.button.button-small {
+  max-width: 130px;
+}
+
+
+
+@media screen and (max-width: 1180px) { 
+  .desctop-hearth {
+    display: none;
+  }
+
+  .hearth-favorites {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+  }
+
+  .hearth-favorites span {
+    right: unset;
+    left: 12px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .favor-new .listing-unit-img-wrapper {
+      min-height: 295px;
+  }
+
+  .favor-new .property_listing img {
+    max-height: 295px;
+    min-height: 295px;
+    object-fit: cover;
+  }
+}
+
+
+
+@media screen and (max-width: 1023px) {
+  .table_wrapper {
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .table_wrapper .table_border {
+    display: table;
+  }
+
+  .category_details_wrapper {
+    width: auto!important;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .main-info {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .main__info-media {
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .main__info-images {
+    max-width: 365px;
+    min-height: auto;
+  }
+
+  .category_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .properties-gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3px 3px;
+  }
+
+  .favoritesnew-span-fullpage {
+    opacity: 1;
+    right: 10px;
+    top: 10px;
+  }
+
+}
+
+
+@media screen and (max-width: 576px) {
+  .gallery-title {
+    font-size: 17px;
+  }
+
+  .main__info-media, .main__info-list {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .main__info-images {
+    max-width: 100%;
+  }
+}
