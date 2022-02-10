@@ -48,5 +48,14 @@ if ( is_user_logged_in() ) {
 
 ?>
 <?php wp_footer();  ?>
+
+<script>
+let mobileHeader = document.querySelector('.mobile_header');
+window.addEventListener('scroll', function() {
+
+    (window.pageYOffset > 300) ? mobileHeader.style.position = 'fixed' : mobileHeader.style.position = 'relative'
+
+})
+</script>
 </body>
 </html>

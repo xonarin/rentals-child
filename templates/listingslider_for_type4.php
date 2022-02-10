@@ -19,13 +19,15 @@ $price_label             =   esc_html ( get_post_meta($post->ID, 'property_label
         echo wpestate_return_property_status($post->ID);
 
 
-        $hidden         =   '';
+        $hidden         =   '';	
+		$my_post = get_post( $post->ID ); // $id - ID поста
         $arguments      =   array(
                                 'numberposts'   =>  -1,
                                 'post_type'     =>  'attachment',
                                 'post_mime_type'=>  'image',
                                 'post_parent'   =>  $post->ID,
                                 'post_status'   =>  null,
+								'author'        =>  1, $my_post,
                                 'orderby'         => 'menu_order',
                                 'order'           => 'ASC',
                                  'exclude'      =>get_post_thumbnail_id(),
@@ -33,6 +35,7 @@ $price_label             =   esc_html ( get_post_meta($post->ID, 'property_label
 
         $post_attachments   = get_posts($arguments);
         $count=0;
+
 
         $total_pictures=count ($post_attachments);
 
@@ -58,6 +61,8 @@ $price_label             =   esc_html ( get_post_meta($post->ID, 'property_label
 
 
 
+
+
                 if($count <= 3 && $count !=0){
                     $full_prty          = wp_get_attachment_image_src($attachment->ID, 'listing_full_slider');
                     print '<div class="col-md-3 image_gallery  '.esc_attr($special_border).' " data-slider-no="'.esc_attr($count+1).'" style="background-image:url('.esc_attr($full_prty[0]).')"> <div class="img_listings_overlay" ></div> </div>';
@@ -80,6 +85,6 @@ $price_label             =   esc_html ( get_post_meta($post->ID, 'property_label
 
 
 </div> 
-<!-- <div class="hidden_photos hidden_type3"><?//php echo trim($hidden);?></div> Абракадабра -->
+ <!--<div class="hidden_photos hidden_type3"><?//php echo trim($hidden);?></div> -->
 
 <!--

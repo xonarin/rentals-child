@@ -22,7 +22,7 @@ global $post;
 
 $booking_type       =   wprentals_return_booking_type($post->ID);
 $rental_type        =   wprentals_get_option('wp_estate_item_rental_type');
-
+$featured           =   intval  ( get_post_meta($post->ID, 'prop_featured', true) );
 
 
 
@@ -91,7 +91,7 @@ if( $schema_flag==1) {
 ?>
 
 
-<div <?php print trim($schema_data);?> class="listing_wrapper <?php print esc_attr($col_class).' '.esc_attr($listing_type_class); ?>  property_flex " data-org="<?php print esc_attr($col_org);?>" data-listid="<?php print esc_attr($post->ID);?>" >
+<div <?php print trim($schema_data);?> class="listing_wrapper <?php print esc_attr($col_class).' '.esc_attr($listing_type_class); ?>  property_flex  property-<?php echo $featured ?>" data-org="<?php print esc_attr($col_org);?>" data-listid="<?php print esc_attr($post->ID);?>" >
 
     <?php if( $schema_flag==1) {?>
         <meta itemprop="position" content="<?php print esc_html($prop_selection->current_post);?>" />
@@ -100,7 +100,7 @@ if( $schema_flag==1) {
     <div class="property_listing " >
         <?php
 
-            $featured           =   intval  ( get_post_meta($post->ID, 'prop_featured', true) );
+            
             $price              =   intval( get_post_meta($post->ID, 'property_price', true) );
             $property_city      =   get_the_term_list($post->ID, 'property_city', '', ', ', '') ;
             $property_area      =   get_the_term_list($post->ID, 'property_area', '', ', ', '');
@@ -115,7 +115,7 @@ if( $schema_flag==1) {
 
             <?php
             if($featured==1){
-                print '<div class="featured_div">'.esc_html__( 'featured','wprentals').'</div>';
+               // print '<div class="featured_div">'.esc_html__( 'featured','wprentals').'</div>';
             }
 
             echo wpestate_return_property_status($post->ID);
@@ -161,7 +161,7 @@ if( $schema_flag==1) {
 
 
                 <div class="category_name">
-                    <?php   include(locate_template('templates/property_card_templates/property_card_title.php'));   ?>
+                    <?//php   include(locate_template('templates/property_card_templates/property_card_title.php'));   ?>
 
                     <!--Абракадабра -->
                     <?php
@@ -184,20 +184,20 @@ if( $schema_flag==1) {
 
                     <?php } ?>
                     <!--Абракадабра -->
-
+					<!--
                     <div class="category_tagline map_icon">
-                        <?php
-                        if ($property_area != '') {
-                            print trim($property_area).', ';
-                        }
-                        print trim($property_city);?>
+                        <?//php
+                        //if ($property_area != '') {
+                           // print trim($property_area).', ';
+                        //}
+                        //print trim($property_city);?>
                     </div>
 
                     <div class="category_tagline actions_icon">
-                        <?php print wp_kses_post($property_categ);?>
-                    </div>
+                        <?//php print wp_kses_post($property_categ);?>
+                    </div>-->
                 </div>
-
+				
                 <div class="property_unit_action">
                     <span class="favoritesnew-span" title="<?php print esc_attr($fav_mes); ?>" data-postid="<?php print intval($post->ID); ?>"><i class="fas fa-heart"></i></span>
                 </div>

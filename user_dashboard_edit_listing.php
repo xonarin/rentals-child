@@ -1,4 +1,7 @@
 <?php
+if ( is_user_logged_in() ) {
+    acf_form_head();
+}
 // Template Name: User Dashboard Edit
 // Wp Estate Pack
 
@@ -292,10 +295,6 @@ if( isset( $_GET['listing_edit'] ) && is_numeric( $_GET['listing_edit'] ) ){
         exit();
     }
 
-}
-
-if ( is_user_logged_in() ) {
-    acf_form_head();
 }
 
 get_header();

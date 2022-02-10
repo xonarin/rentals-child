@@ -23,13 +23,33 @@ global $submission_page_fields;
     }
       $wprentals_is_per_hour  =   wprentals_return_booking_type($edit_id);
 
+function get_url_for_language( $original_url, $language )
+{
+    $post_id = url_to_postid( $original_url );
+    $lang_post_id = icl_object_id( $post_id , 'page', true, $language );
+     
+    $url = "";
+    if($lang_post_id != 0) {
+        $url = get_permalink( $lang_post_id );
+    }else {
+        // No page found, it's most likely the homepage
+        global $sitepress;
+        $url = $sitepress->language_url( $language );
+    }
+     
+    return $url;
+}
+
+$url = get_permalink( $edit_id, $leavename );
+$abra = get_url_for_language( $url, ua );
+$post_ID = url_to_postid($abra);
 ?>
 
 
 
 
 <div class="col-md-12">
-<h4 class="user_dashboard_panel_title">Сохранить все изменения и отправить на модерацию</h4>
+<h4 class="user_dashboard_panel_title"><a href="/ua/edit-listing-2/?listing_edit=<?php echo $post_ID?>&action=description">Теперь отредактируйте версию на Украинском языке, если нужно.</a></h4>
 <div class="display_none">
     <h4 class="user_dashboard_panel_title"><?php  esc_html_e('When is your listing available','wprentals');?></h4>
 
@@ -116,7 +136,7 @@ global $submission_page_fields;
             </div>
 
 
-        <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="edit_calendar" value="<?php esc_html_e('Save', 'wprentals') ?>">
+			<a href="/ua/edit-listing-2/?listing_edit=<?php echo $post_ID?>&action=description" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button">Редактировать Укр.версию</a>
         <?php
         $ajax_nonce = wp_create_nonce( "wprentals_edit_calendar_nonce" );
         print'<input type="hidden" id="wprentals_edit_calendar_nonce" value="'.esc_html($ajax_nonce).'" />    ';

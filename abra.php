@@ -21,7 +21,8 @@ function abra($ftitle, $frating, $fskidka, $fsea, $flink, $fpostImage, $fcomment
     }
 
     if($ffeatured==1){
-        $ffeatured = '<div class="featured_div">'.esc_html__( 'featured','wprentals').'</div>';
+        //$ffeatured = '<div class="featured_div">'.esc_html__( 'featured','wprentals').'</div>';
+		$ffeatured = '';
     } else {
         $ffeatured = '';
     }
@@ -47,6 +48,7 @@ function abra($ftitle, $frating, $fskidka, $fsea, $flink, $fpostImage, $fcomment
     <div itemscope='' itemtype='http://schema.org/Product' class='listing_wrapper col-md-6 shortcode-col property_unit_v2  property_flex ' data-org='4' data-listid='40369'>
 	<div class='property_listing '>
 		<div class='listing-unit-img-wrapper'>
+		<h4 class='listing_title_unit listing-new-title'>{$ftitle}</h4>
 			{$fskidkaResult}
 			<div class='rating-comments_block'> 
             <span class='rating-block'>
@@ -74,20 +76,9 @@ function abra($ftitle, $frating, $fskidka, $fsea, $flink, $fpostImage, $fcomment
 <div class='title-container'>
 	<div class='owner_thumb' style='background-image: url()'></div>
 	<div class='category_name'>
-		<a itemprop='url' href='{$flink}' class='listing_title_unit'>
-			<span itemprop='name'>{$ftitle}</span>
-		</a>
 
         {$phoneHtml}
 
-        <div class='category_tagline map_icon'>
-            {$fproperty_area}
-            {$fproperty_city}
-        </div>
-
-        <div class='category_tagline actions_icon'>
-            {$propCat}
-        </div>
 	</div>
 	<div class='property_unit_action'> 
         <span class='favoritesnew-span' onclick='favfav()' title='Добавить в избранного' data-postid='{$fpostID}'>

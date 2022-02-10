@@ -121,11 +121,11 @@ if( $schema_flag==1) {
 
 
             <?php
-            if($featured==1){
+           /* if($featured==1){
                 print '<div class="featured_div">'.esc_html__( 'featured','wprentals').'</div>';
             }
 
-            echo wpestate_return_property_status($post->ID);
+            echo wpestate_return_property_status($post->ID);*/
             ?>
 
             <div class="title-container">
@@ -143,10 +143,10 @@ if( $schema_flag==1) {
                         include(locate_template('templates/property_card_templates/property_card_title.php'));
                     ?>
 
+
                     <div class="category_tagline actions_icon">
                         <?php print trim($property_categ.' / '.$property_action);?>
                     </div>
-
                     <div class="category_tagline custom_details">
                        <?php
                         $options_array=array(

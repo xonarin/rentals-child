@@ -52,7 +52,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
               
                 
                 <div  id="listing_description_type3">
-                <h1><?php echo $post_title ?></h1>
+                <h1 class="post_title-hotel"><?php echo $post_title ?></h1>
                 <div class="main-info">
                 <span class="favoritesnew-span favoritesnew-span-fullpage" title="<?php print esc_attr($fav_mes); ?>" data-postid="<?php print intval($post->ID); ?>"><i class="fas fa-heart"></i></span>
 
@@ -71,18 +71,35 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
 
                         <ul class="main__info-list">
                             <li class="main__info-item">
-                                <span class="main__info-key">Курорт:</span>
-                                <span class="main__info-value">Железный Порт</span>
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	<span class="main__info-key">Курорт:</span>
+								<?php } else { ?>
+                                	<span class="main__info-key">Курорт:</span>
+								<?php } ?>
+								
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	<span class="main__info-value">Железный Порт</span>
+								<?php } else { ?>
+                                	<span class="main__info-key">Залізний порт:</span>
+								<?php } ?>
                             </li>
                             <li class="main__info-item">
-                                <span class="main__info-key">Регион:</span>
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	<span class="main__info-key">Регион:</span>
+								<?php } else { ?>
+                                	<span class="main__info-key">Регіон:</span>
+								<?php } ?>
                                 
                                 <span class="main__info-value"><?php echo $property_area ?></span>
                             </li>
 
                             <?php if ($property_address != '') {  ?>
                                 <li class="main__info-item">
-                                    <span class="main__info-key">Адрес:</span>
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	<span class="main__info-key">Адрес:</span>
+								<?php } else { ?>
+                                	<span class="main__info-key">Адреса:</span>
+								<?php } ?>
                                     <span class="main__info-value"><?php echo $property_address ?></span>
                                 </li>
                             <?php } ?>
@@ -92,17 +109,29 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
                                     <span class="main__info-key">Телефон:</span>
                                     <span class="main__info-value">
                                         <span class="phone_card-info" data-phonecard="<?php echo $post->ID ?>"><?php echo $phonePreviewResult ?></span>
-                                        <a href="#" id="<?php echo $post->ID ?>" class="show_phone phone-count" data-phoneshow="<?php echo $post->ID ?>" data-fullphone="<?php echo $phonepreview ?>">показать</a>
+                                        <a href="#" id="<?php echo $post->ID ?>" class="show_phone phone-count" data-phoneshow="<?php echo $post->ID ?>" data-fullphone="<?php echo $phonepreview ?>">
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	показать
+								<?php } else { ?>
+                                	показати
+								<?php } ?>
+										</a>
                                     </span>
                                 </li>
                             <?php } ?>
 
-                            <?php if ($viber != '') {  ?>
+                           <?php if ($viber != '') {  ?>
                                 <li class="main__info-item open-info-block">
                                     <span class="main__info-key">Viber:</span>
                                     <span class="main__info-value">
                                         <span class="phone_card-info" data-phonecard="<?php echo $post->ID ?>"><?php echo $viberResult ?></span>
-                                        <a href="#" id="<?php echo $post->ID ?>" class="show_phone phone-count" data-phoneshow="<?php echo $post->ID ?>" data-fullphone="<?php echo $viber ?>">показать</a>
+                                        <a href="#" id="<?php echo $post->ID ?>" class="show_phone phone-count" data-phoneshow="<?php echo $post->ID ?>" data-fullphone="<?php echo $viber ?>">
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	показать
+								<?php } else { ?>
+                                	показати
+								<?php } ?>
+										</a>
                                     </span>
                                 </li>
                             <?php } ?>
@@ -112,7 +141,13 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
                                     <span class="main__info-key">Telegram:</span>
                                     <span class="main__info-value">
                                         <span class="phone_card-info" data-phonecard="<?php echo $post->ID ?>"><?php echo $telegramResult ?></span>
-                                        <a href="#" id="<?php echo $post->ID ?>" class="show_phone phone-count" data-phoneshow="<?php echo $post->ID ?>" data-fullphone="<?php echo $telegram ?>">показать</a>
+                                        <a href="#" id="<?php echo $post->ID ?>" class="show_phone phone-count" data-phoneshow="<?php echo $post->ID ?>" data-fullphone="<?php echo $telegram ?>">
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	показать
+								<?php } else { ?>
+                                	показати
+								<?php } ?>
+										</a>
                                     </span>
                                 </li>
                             <?php } ?>
@@ -126,24 +161,40 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
 
                             <?php if ($distancesea != '') {  ?>
                                 <li class="main__info-item">
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
                                     <span class="main__info-key">Расстояние до моря:</span>
+								<?php } else { ?>
+                                    <span class="main__info-key">Відстань до моря:</span>
+								<?php } ?>
                                     <span class="main__info-value"><?php echo $distancesea ?></span>
                                 </li>
                             <?php } ?>
 
                             <li class="main__info-item">
-                                <span class="main__info-key">Цена от:</span>
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                    <span class="main__info-key">Цена от:</span>
+								<?php } else { ?>
+                                    <span class="main__info-key">Ціна від:</span>
+								<?php } ?>
                                 <span class="main__info-value"><?php echo $price ?> грн.</span>
                             </li>
 
-                            <li class="main__info-item">
-                                <span class="main__info-key">Количество просмотров:</span>
-                                <span class="main__info-value"><?php echo do_shortcode('[post-views]'); ?></span>
-                            </li>
+<!--                         <li class="main__info-item">
+								<?//php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	<span class="main__info-key">Количество просмотров:</span>
+								<?//php } else { ?>
+                                    <span class="main__info-key">Кількість переглядів:</span>
+								<?//php } ?>
+                                <span class="main__info-value"><?//php echo do_shortcode('[post-views]'); ?></span>
+                            </li> -->
 
                             <li class="main__info-item">
-                                <span class="main__info-key">Последнее обновление:</span>
-                                <span class="main__info-value"><?php the_date('j F Y H:i:s'); ?></span>
+								<?php if (ICL_LANGUAGE_CODE == 'ru') { ?>
+                                	<span class="main__info-key">Последнее обновление:</span>
+								<?php } else { ?>
+                                    <span class="main__info-key">Останнє оновлення:</span>
+								<?php } ?>
+                                <span class="main__info-value"><?php the_modified_date('F j Y года'); ?></span>
                             </li>
                             <li class="main__info-item">
                                 <span class="main__info-key">ID:</span>
@@ -195,29 +246,22 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
     $i = 1;
     $currentIndex = 0;
     if( $images['gallery'] ): ?>
-        <?php if (count($images['gallery']) >= 6) { ?>
+        <?php if (count($images['gallery']) >= 0) { ?>
             <h2 class="gallery-title">Фотогалерея <?php echo $post_title ?></h2>
             <ul class="properties-gallery">
                 
                 <?php foreach( $images['gallery'] as  $image ): 
                     
-                if($currentIndex > 4) {
+
                 ?>
                     
 
                     <li class="properties-gallery__item">
                         <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                            <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                            <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                         </a>
                     </li>
-                <?php } else {  ?>
-                    <li class="properties-gallery__item" style="display:none">
-                        <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                            <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
-                        </a>
-                    </li>
-                
-                <?php }
+                <?php 
                 
                 $i++; $currentIndex++; endforeach; ?>
             </ul>
@@ -236,7 +280,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
             <?php foreach( $images['gallery'] as  $image ): ?>
                 <li class="properties-gallery__item">
                     <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                        <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                     </a>
                 </li>
             <?php $i++; endforeach; ?>
@@ -256,7 +300,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
             <?php foreach( $images['gallery'] as  $image ): ?>
                 <li class="properties-gallery__item">
                     <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                        <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                     </a>
                 </li>
             <?php $i++; endforeach; ?>
@@ -276,7 +320,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
             <?php foreach( $images['gallery'] as  $image ): ?>
                 <li class="properties-gallery__item">
                     <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                        <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                     </a>
                 </li>
             <?php $i++; endforeach; ?>
@@ -296,7 +340,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
             <?php foreach( $images['gallery'] as  $image ): ?>
                 <li class="properties-gallery__item">
                     <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                        <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                     </a>
                 </li>
             <?php $i++; endforeach; ?>
@@ -316,7 +360,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
             <?php foreach( $images['gallery'] as  $image ): ?>
                 <li class="properties-gallery__item">
                     <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                        <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                     </a>
                 </li>
             <?php $i++; endforeach; ?>
@@ -336,7 +380,7 @@ $skidka     =   esc_html(get_post_meta($post->ID, 'skidka', true));
             <?php foreach( $images['gallery'] as  $image ): ?>
                 <li class="properties-gallery__item">
                     <a href="<?php echo esc_url($image['url']); ?>" rel="data-fancybox-thumb" data-fancybox="website_rental_gallery" data-caption="" class="fancybox-thumb prettygalery">
-                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
+                        <img class="gallery-mini-img" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo ''.$post_title.' фото '.$i.'' ?>" />
                     </a>
                 </li>
             <?php $i++; endforeach; ?>

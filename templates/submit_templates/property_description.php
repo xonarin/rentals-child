@@ -25,7 +25,6 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
 
 <div class="col-md-12" id="new_post2">
-
     <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Description','wprentals');?></h4>
 
     <?php wpestate_show_mandatory_fields();?>

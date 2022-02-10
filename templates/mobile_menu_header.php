@@ -21,9 +21,9 @@ $logo= wprentals_get_option('wp_estate_logo_image', 'url');
         <div class="mobile-trigger-user"><i class="fas fa-user-circle"></i></div>
     <?php //} ?> -->
 
-    <a class="hearth-favorites" href="/my-favorites"><span></span></a>
+    <a class="hearth-favorites" href="/my-favorites"><span>0</span></a>
 </div>
 <div class="desctop-hearth">
-    <a class="hearth-favorites" href="/my-favorites"><span></span></a>   
+    <a class="hearth-favorites" href="/my-favorites"><span>0</span></a>   
 </div>
 
